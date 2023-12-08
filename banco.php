@@ -1,5 +1,7 @@
 <?php
 
+require 'funcoes.php';
+
 $contasCorrentes = [
     '123.456.789-10' => [
         'titular' => 'Vinicius',
@@ -24,5 +26,5 @@ if(500 > $contasCorrentes['128.456.289-10']['saldo']) {
 
 
 foreach ($contasCorrentes as $cpf => $conta) {
-    echo $conta['titular'], ' CPF ', $cpf, ' saldo ', $conta['saldo'] . PHP_EOL;
+    echo "{$conta['titular']}, CPF, $cpf, saldo, {$conta['saldo']}" . '<br>';
 }
